@@ -24,6 +24,13 @@ Run `jumpstart.sh` to download installation media for macOS (internet required).
 > Note: You can skip this if you already have `BaseSystem.img` downloaded. If you have `BaseSystem.dmg`, you will need to convert it with the `dmg2img` tool.
 
 ## Step 2
+Run `esp.sh` to generate the EFI System Partition:
+```
+./esp.sh
+```
+> Note: You can skip this if you already have `ESP.qcow2`.
+
+## Step 3
 Create an empty hard disk using `qemu-img`, changing the name and size to preference:
 ```
 qemu-img create -f qcow2 MyDisk.qcow2 64G
@@ -38,17 +45,17 @@ and add it to the end of `basic.sh`:
 
 Then run `basic.sh` to start the machine and install macOS. Remember to partition in Disk Utility first!
 
-## Step 2a (Virtual Machine Manager)
+## Step 4a (Virtual Machine Manager)
 1. If instead of QEMU, you'd like to import the setup into Virt-Manager for further configuration, just run `sudo ./make.sh --add`.
 2. After running the above command, add `MyDisk.qcow2` as storage in the properties of the newly added entry for VM.
 
-## Step 2b (Headless Systems)
+## Step 4b (Headless Systems)
 If you're using a cloud-based/headless system, you can use `headless.sh` to set up a quick VNC instance. Settings are defined through variables as seen in the following example. VNC will start on port `5900` by default.
 ```
 HEADLESS=1 MEM=1G CPUS=2 SYSTEM_DISK=MyDisk.qcow2 ./headless.sh
 ```
 
-## Step 3
+## Step 5
 
 You're done!
 
