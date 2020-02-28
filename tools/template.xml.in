@@ -62,10 +62,11 @@
     <controller type='sata' index='0'>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1f' function='0x2'/>
     </controller>
-    <interface type='network'>
+    <interface type='bridge'>
       <mac address='MAC_ADDRESS'/>
-      <source network='default'/>
-      <model type='e1000-82545em'/>
+      <source bridge='virbr0'/>
+      <target dev='tap0'/>
+      <model type='vmxnet3'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
     </interface>
     <input type='tablet' bus='usb'>
