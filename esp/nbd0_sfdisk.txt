@@ -3,7 +3,6 @@ label-id: D6C5E6C0-3E21-4844-B4B7-11B0C0E8371C
 device: /dev/nbd0
 unit: sectors
 first-lba: 34
-last-lba: 524254
+last-lba: 532446
 
-/dev/nbd0p1 : start=        2048, size=      197953, type=C12A7328-F81F-11D2-BA4B-00A0C93EC93B, uuid=C43F7919-F087-451E-9FBB-38C3AADD6343, name="primary"
-/dev/nbd0p2 : start=      202048, size=      320193, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4, uuid=6EE46BDA-AEBB-4743-93A3-D562F2A8F9F3, name="primary"
+/dev/nbd0p1 : start=        2048, size=      530399, type=C12A7328-F81F-11D2-BA4B-00A0C93EC93B, uuid=C43F7919-F087-451E-9FBB-38C3AADD6343
