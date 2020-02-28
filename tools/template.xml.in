@@ -1,9 +1,9 @@
 <domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
-  <name>macOS-Simple-KVM</name>
-  <uuid>d06d502a-904a-4b34-847d-debf1a3d76c7</uuid>
-  <memory unit='KiB'>2097152</memory>
-  <currentMemory unit='KiB'>2097152</currentMemory>
-  <vcpu placement='static'>4</vcpu>
+  <name>NAME</name>
+  <uuid>UUID</uuid>
+  <memory unit='KiB'>MEMORY</memory>
+  <currentMemory unit='KiB'>MEMORY</currentMemory>
+  <vcpu placement='static'>VCPU</vcpu>
   <os>
     <type arch='x86_64' machine='MACHINE'>hvm</type>
     <loader readonly='yes' type='pflash'>VMDIR/firmware/OVMF_CODE.fd</loader>
@@ -16,7 +16,7 @@
     <vmport state='off'/>
   </features>
   <cpu>
-    <topology sockets='1' cores='4' threads='1'/>
+    <topology sockets='1' cores='CORES' threads='THREADS'/>
   </cpu>
   <clock offset='utc'>
     <timer name='rtc' tickpolicy='catchup'/>
@@ -63,7 +63,7 @@
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1f' function='0x2'/>
     </controller>
     <interface type='network'>
-      <mac address='52:54:00:92:d4:7b'/>
+      <mac address='MAC_ADDRESS'/>
       <source network='default'/>
       <model type='e1000-82545em'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>

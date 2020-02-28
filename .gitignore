@@ -2,3 +2,7 @@
 BaseSystem.img
 BaseSystem.dmg
 BaseSystem.chunklist
+.env
+*.qcow2
+!/ESP.qcow2
+template.xml
